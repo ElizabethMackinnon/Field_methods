@@ -21,7 +21,7 @@ obs_start = Time.index('12:39')
 obs_end = Time.index('16:54')
 plt.axvspan(obs_start, obs_end, color='blue', alpha=0.5, label='Observation period')
 
-plt.plot(sub_Time, sub_values, label='Temperature [deg C]', linestyle = '--', color = 'pink')
+plt.plot(sub_Time, sub_values, label='Temperature [deg C]', linestyle = '-', color = 'black')
 plt.xlabel('Time')
 plt.ylabel("Temperature [deg C]")
 plt.title('Temperature vs Time')
