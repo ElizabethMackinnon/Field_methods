@@ -1,5 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
+from datetime import timedelta
 
 # time vs temperature
 
@@ -15,19 +17,23 @@ y = Time.index(end)
 
 sub_Time = Time[x : y]
 sub_values = values[x : y]
+obs_start = Time.index('12:39')
+obs_end = Time.index('16:54')
+plt.axvspan(obs_start, obs_end, color='blue', alpha=0.5, label='Observation period')
 
 plt.plot(sub_Time, sub_values, label='Temperature [deg C]', linestyle = '--', color = 'pink')
 plt.xlabel('Time')
 plt.ylabel("Temperature [deg C]")
 plt.title('Temperature vs Time')
 
+plt.legend(loc='upper left')
+
 locs, labels = plt.xticks()
 plt.xticks(locs[::10], labels[::10], rotation=45)
 
 locs, labels = plt.yticks()
 plt.yticks(locs[::10], labels[::10])
-
-plt.subplots_adjust(bottom=0.35)
+plt.tight_layout()
 plt.show()
 
 # time vs solar
