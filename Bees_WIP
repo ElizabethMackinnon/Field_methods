@@ -1,0 +1,101 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+# center
+
+data = (10, 20, 30)
+variables = ('Small [Range]', 'Medium [Range]', 'Large [Range]')
+colors = ('yellow', 'black', 'yellow')
+
+x = np.arange(len(variables))
+width = 0.25 
+multiplier = 0
+
+fig, ax = plt.subplots(constrained_layout=True)
+
+offset = width * multiplier
+rects = ax.bar(x + offset, data, width, color = colors)
+
+ax.set_ylabel('Number of Occurances')
+ax.set_title('Bee landing behaviour in realation to center size')
+ax.set_xticks(x)
+
+ax.xaxis.set_ticks_position('none')
+ax.set_xticklabels(['Small [Range]', 'Medium [Range]', 'Large [Range]'])
+
+
+plt.show()
+
+# colour
+
+data = (10, 12, 9, 13, 10, 11)
+variables = ('red', 'orange', 'yellow', 'green', 'blue', 'purple')
+colors = ('red', 'orange', 'yellow', 'green', 'blue', 'purple')
+
+x = np.arange(len(variables))
+width = 0.25 
+multiplier = 0
+
+fig, ax = plt.subplots(constrained_layout=True)
+
+offset = width * multiplier
+rects = ax.bar(x + offset, data, width, color = colors)
+
+ax.set_ylabel('Number of Occurances')
+ax.set_title('Bee landing behaviour in realation to flower colour')
+ax.set_xticks(x)
+
+ax.xaxis.set_ticks_position('none')
+ax.set_xticklabels(['red', 'orange', 'yellow', 'green', 'blue', 'purple'])
+
+
+plt.show()
+
+data = (10, 20, 30)
+variables = ('Small [Range]', 'Medium [Range]', 'Large [Range]')
+colors = ('yellow', 'black', 'yellow')
+
+x = np.arange(len(variables))
+width = 0.25 
+multiplier = 0
+
+fig, ax = plt.subplots(constrained_layout=True)
+
+offset = width * multiplier
+rects = ax.bar(x + offset, data, width, color = colors)
+
+ax.set_ylabel('Number of Occurances')
+ax.set_title('Bee landing behaviour in realation to center size')
+ax.set_xticks(x)
+
+ax.xaxis.set_ticks_position('none')
+ax.set_xticklabels(['Small [Range]', 'Medium [Range]', 'Large [Range]'])
+
+
+plt.show()
+
+# size
+
+data = (10, 12, 13)
+variables = ('Small [Range]', 'Medium [Range]', 'Large [Range]')
+colors = ('black', 'yellow', 'black')
+
+x = np.arange(len(variables))
+width = 0.25 
+multiplier = 0
+
+fig, ax = plt.subplots(constrained_layout=True)
+
+offset = width * multiplier
+rects = ax.bar(x + offset, data, width, color = colors)
+
+ax.set_ylabel('Number of Occurances')
+ax.set_title('Bee landing behaviour in realation to flower size')
+ax.set_xticks(x)
+
+ax.xaxis.set_ticks_position('none')
+ax.set_xticklabels(['Small [Range]', 'Medium [Range]', 'Large [Range]'])
+
+
+plt.show()
